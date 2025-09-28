@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Page</title>
+</head>
+<body display = "block" align = "center">
+    <h1>This article has {{word_count}} words</h1>
+    <p>Name: {{ name }}</p>
+    <p>Subject: {{ subject }}</p>
+    <p>Marks: {{ marks }}</p>
+    <p>Status: {{ status }}</p>
+
+    <br>
+    <a href="{% url 'home' %}">Back to Home</a>
+    <br>
+    {{article}}
+    <br>
+    <br>
+    <h1>Total Count </h1>
+    {% for word, num in dict_words%}
+   <h1>{{word}} = {{num}}</h1> 
+    {% endfor %}
+</body>
+</html> 

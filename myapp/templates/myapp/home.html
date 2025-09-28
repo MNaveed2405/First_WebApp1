@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body display = "block" align = "center">
+    <h1>Welcome to Home Page</h1>
+    <p>Click below to see your result:</p>
+    <a href="{% url 'result' %}">Go to Result Page</a>
+    <br>
+    <form action="{% url 'result' %}">
+        <br>
+
+        {% csrf_token %}
+   <textarea name="article" rows="10" cols="60" ></textarea>
+    <input type="submit" value="Submit">    
+
+ 
+    </form>
+</body>
+</html>
